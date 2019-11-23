@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployeeEditServices">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/spServicesEditTitle"
+        android:text="SERVICE LIST"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:layout_centerHorizontal="true" />
+
+
+    <ListView
+        android:id="@+id/spServicesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spServicesEditTitle"
+        android:layout_above="@+id/spServicesEditButtons"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/spServicesEditButtons">
+
+        <Button
+            android:id="@+id/spServicesEditAdd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:onClick="onClickAddToSPlist"
+            android:padding="10dp"
+            android:text="Add"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/spServicesEditCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:onClick="onClickCancelToFragSP"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

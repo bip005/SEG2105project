@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AdminWelcomePage">
+
+        <ViewSwitcher
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewSwitcher">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/admin_accounts_view">
+
+                <TextView
+                    android:id="@+id/accountsPageTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="ACCOUNTS"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:layout_gravity="center_horizontal" />
+
+                <ListView
+                    android:id="@+id/accountList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/admin_services_view">
+
+                <TextView
+                    android:id="@+id/servicePageTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="SERVICES"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal" />
+
+                <ListView
+                    android:id="@+id/serviceList"
+                    android:layout_below="@id/servicePageTitle"
+                    android:layout_above="@+id/adminServicesButtonList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:choiceMode="singleChoice"
+                    android:listSelector="@android:color/darker_gray">
+
+                </ListView>
+
+                <LinearLayout
+                    android:id="@+id/adminServicesButtonList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout02"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/editServiceButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:onClick="onClickEdit"
+                            android:text="Edit Service" />
+
+                        <Button
+                            android:id="@+id/addServiceButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:onClick="onClickAddNewService"
+                            android:text="Add New Service" />
+
+                        <Button
+                            android:id="@+id/deleteServiceButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:onClick="onClickDelete"
+                            android:text="Delete Service" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ViewSwitcher>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    </FrameLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"/>/>
+
+</android.support.v4.widget.DrawerLayout>
