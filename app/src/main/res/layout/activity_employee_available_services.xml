@@ -18,7 +18,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="10dp"
         android:id="@+id/spServicesEditTitle"
-        android:text="SERVICE LIST"
+        android:text="Services"
         android:textSize="36sp"
         android:textStyle="bold"
         android:typeface="serif"
