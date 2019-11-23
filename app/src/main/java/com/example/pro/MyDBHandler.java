@@ -489,7 +489,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
     }
 
     //To find the profile information of a specific service provider using his user name
-    public Employee findServiceProvider(String userName){
+    public Employee findEmployee(String userName){
         Employee account = (Employee) findAccountByUserName(userName);
         SQLiteDatabase db = this.getReadableDatabase();
 

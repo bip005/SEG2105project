@@ -43,7 +43,7 @@ public class EmployeeWelcomePage extends AppCompatActivity {
         TextView headerUsername = (TextView) navHeaderView.findViewById(R.id.headerUsername);
         headerUsername.setText(extractAccount());
         TextView headerRole = (TextView) navHeaderView.findViewById(R.id.headerRole);
-        headerRole.setText("Service Provider");
+        headerRole.setText("Employee");
     }
 
     private String extractAccount(){

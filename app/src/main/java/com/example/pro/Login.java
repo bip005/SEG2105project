@@ -48,7 +48,7 @@ public class Login extends AppCompatActivity {
             if(account instanceof Employee){
                 if(dbHandler.spProfileExists(account.getUserName())) {
                     Intent intent = new Intent(getApplicationContext(), EmployeeWelcomePage.class);
-                    Employee sp = dbHandler.findServiceProvider(user);
+                    Employee sp = dbHandler.findEmployee(user);
                     bundle.putSerializable("Account", sp);
                     intent.putExtras(bundle);
                     startActivity(intent);
